@@ -1,3 +1,5 @@
+import Storage from './storage.js';
+
 const title = document.getElementById('title');
 const author = document.getElementById('author');
 

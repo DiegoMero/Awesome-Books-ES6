@@ -1,11 +1,14 @@
 import { DateTime } from './modules/luxon.js';
-import Display from './modules/display.js';
-import Storage from './modules/storage.js';
 import Book from './modules/book.js';
+import Storage from './modules/storage.js';
+import Display from './modules/display.js';
 
-const button = document.getElementById('button');
+const date = document.querySelector('.date');
+date.innerHTML = DateTime.now();
+
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+const button = document.getElementById('button');
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
@@ -28,8 +31,6 @@ const main = document.querySelector('.main');
 const showMain = document.querySelector('.show-main');
 const showContact = document.querySelector('.show-contact');
 const contact = document.querySelector('.contact-section');
-
-const date = document.querySelector('.date');
 
 addNew.addEventListener('click', () => {
   if (!form.classList.contains('active')) {
@@ -54,5 +55,3 @@ showContact.addEventListener('click', () => {
     contact.classList.add('active');
   }
 });
-
-date.innerHTML = DateTime();
